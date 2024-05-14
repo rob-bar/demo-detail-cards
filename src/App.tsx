@@ -1,10 +1,20 @@
+import { useState } from "react";
 import { styled } from "styled-components";
 
 export function App() {
+  const [imageScale, setImageScale] = useState(1);
+
+  const handleScroll = (e) => {
+    setImageScale(1 - e.target.scrollTop / 1000);
+  };
+
   return (
     <DetailedWrapper>
-      <Detail>
-        <DetailImage src="https://picsum.photos/id/29/400/500" alt="image" />
+      <Detail onScroll={handleScroll}>
+        <DetailImage
+          imageScale={imageScale}
+          backGround="https://picsum.photos/id/29/400/500"
+        />
         <Content>
           <h2>
             Ullamco officia qui ipsum excepteur sit sint fugiat in eiusmod ut
@@ -27,8 +37,11 @@ export function App() {
           </p>
         </Content>
       </Detail>
-      <Detail>
-        <DetailImage src="https://picsum.photos/id/24/400/500" alt="bear" />
+      <Detail onScroll={handleScroll}>
+        <DetailImage
+          imageScale={imageScale}
+          backGround="https://picsum.photos/id/24/400/500"
+        />
         <Content>
           <h2>
             Ullamco officia qui ipsum excepteur sit sint fugiat in eiusmod ut
@@ -36,10 +49,15 @@ export function App() {
             fugiat esse voluptate quis culpa id et labore sunt veniam
           </h2>
           <p>Anim laboris exercitation fugiat, cillum. Fugiat cillum</p>
+          <p>Anim laboris exercitation fugiat, cillum. Fugiat cillum</p>
+          <p>Anim laboris exercitation fugiat, cillum. Fugiat cillum</p>
         </Content>
       </Detail>
-      <Detail>
-        <DetailImage src="https://picsum.photos/id/30/400/500" alt="bear" />
+      <Detail onScroll={handleScroll}>
+        <DetailImage
+          imageScale={imageScale}
+          backGround="https://picsum.photos/id/30/400/500"
+        />
         <Content>
           <h2>
             Ullamco officia qui ipsum excepteur sit sint fugiat in eiusmod ut
@@ -184,15 +202,22 @@ const Detail = styled.div`
   overflow-y: scroll;
 `;
 
-const DetailImage = styled.img`
+const DetailImage = styled.div<{ backGround: string; imageScale: number }>`
   width: 100%;
-  /* position: fixed; */
+  background-image: url(${(props) => props.backGround});
+  background-size: contain;
+  aspect-ratio: 4 / 5;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top center;
+  background-size: ${(props) => props.imageScale * 100}%;
   top: 0;
   z-index: -1;
 `;
 
 const Content = styled.div`
   padding: 2rem;
+  /* padding-top: calc(100vw * 5 / 4 + 2rem); */
 
   h2 {
     margin: 0;
