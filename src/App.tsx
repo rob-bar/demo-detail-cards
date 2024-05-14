@@ -4,10 +4,7 @@ export function App() {
   return (
     <DetailedWrapper>
       <Detail>
-        <DetailImage
-          src="https://picsum.photos/seed/picsum/400/500"
-          alt="image"
-        />
+        <DetailImage src="https://picsum.photos/id/29/400/500" alt="image" />
         <Content>
           <h2>
             Ullamco officia qui ipsum excepteur sit sint fugiat in eiusmod ut
@@ -31,10 +28,7 @@ export function App() {
         </Content>
       </Detail>
       <Detail>
-        <DetailImage
-          src="https://picsum.photos/seed/picsum/400/500"
-          alt="bear"
-        />
+        <DetailImage src="https://picsum.photos/id/24/400/500" alt="bear" />
         <Content>
           <h2>
             Ullamco officia qui ipsum excepteur sit sint fugiat in eiusmod ut
@@ -45,10 +39,7 @@ export function App() {
         </Content>
       </Detail>
       <Detail>
-        <DetailImage
-          src="https://picsum.photos/seed/picsum/400/500"
-          alt="bear"
-        />
+        <DetailImage src="https://picsum.photos/id/30/400/500" alt="bear" />
         <Content>
           <h2>
             Ullamco officia qui ipsum excepteur sit sint fugiat in eiusmod ut
