@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { UIEvent, useState } from "react";
 import { styled } from "styled-components";
 
 export function App() {
   const [imageScale, setImageScale] = useState(1);
 
-  const handleScroll = (e) => {
-    setImageScale(1 - e.target.scrollTop / 1000);
+  const handleScroll = (e: UIEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLDivElement;
+    setImageScale(1 - target.scrollTop / 1000);
   };
 
   return (
