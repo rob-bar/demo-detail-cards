@@ -11,7 +11,7 @@ export function App() {
   return (
     <DetailedWrapper>
       <Detail>
-        <DetailImage backGround="https://picsum.photos/id/29/400/500" />
+        <DetailImage backGround="https://preview-focus.mediahuisgroup.com/raw/preview-mh-nerdland/replicate-2024-4-29-091008074095.png" />
         <Content>
           <h2>
             Ullamco officia qui ipsum excepteur sit sint fugiat in eiusmod ut
@@ -35,7 +35,7 @@ export function App() {
         </Content>
       </Detail>
       <Detail>
-        <DetailImage backGround="https://picsum.photos/id/24/400/500" />
+        <DetailImage backGround="https://preview-focus.mediahuisgroup.com/raw/preview-mh-nerdland/replicate-2024-4-29-091008395830.png" />
         <Content>
           <h2>
             Ullamco officia qui ipsum excepteur sit sint fugiat in eiusmod ut
@@ -48,7 +48,7 @@ export function App() {
         </Content>
       </Detail>
       <Detail>
-        <DetailImage backGround="https://picsum.photos/id/30/400/500" />
+        <DetailImage backGround="https://preview-focus.mediahuisgroup.com/raw/preview-mh-nerdland/replicate-2024-4-29-091008330584.png" />
         <Content>
           <h2>
             Ullamco officia qui ipsum excepteur sit sint fugiat in eiusmod ut
