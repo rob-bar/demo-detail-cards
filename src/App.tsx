@@ -198,15 +198,16 @@ const DetailImage = styled.div<{ backGround: string }>`
   background-image: url(${(props) => props.backGround});
   aspect-ratio: 4 / 5;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-position: top center;
   background-size: cover;
+  position: sticky;
   top: 0;
   z-index: -1;
 `;
 
 const Content = styled.div`
   padding: 2rem;
+  background-color: #242424;
   /* padding-top: calc(100vw * 5 / 4 + 2rem); */
 
   h2 {
