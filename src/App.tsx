@@ -12,10 +12,7 @@ export function App() {
   return (
     <DetailedWrapper>
       <Detail onScroll={handleScroll}>
-        <DetailImage
-          imageScale={imageScale}
-          backGround="https://picsum.photos/id/29/400/500"
-        />
+        <DetailImage backGround="https://picsum.photos/id/29/400/500" />
         <Content>
           <h2>
             Ullamco officia qui ipsum excepteur sit sint fugiat in eiusmod ut
@@ -39,10 +36,7 @@ export function App() {
         </Content>
       </Detail>
       <Detail onScroll={handleScroll}>
-        <DetailImage
-          imageScale={imageScale}
-          backGround="https://picsum.photos/id/24/400/500"
-        />
+        <DetailImage backGround="https://picsum.photos/id/24/400/500" />
         <Content>
           <h2>
             Ullamco officia qui ipsum excepteur sit sint fugiat in eiusmod ut
@@ -55,10 +49,7 @@ export function App() {
         </Content>
       </Detail>
       <Detail onScroll={handleScroll}>
-        <DetailImage
-          imageScale={imageScale}
-          backGround="https://picsum.photos/id/30/400/500"
-        />
+        <DetailImage backGround="https://picsum.photos/id/30/400/500" />
         <Content>
           <h2>
             Ullamco officia qui ipsum excepteur sit sint fugiat in eiusmod ut
@@ -203,15 +194,14 @@ const Detail = styled.div`
   overflow-y: scroll;
 `;
 
-const DetailImage = styled.div<{ backGround: string; imageScale: number }>`
+const DetailImage = styled.div<{ backGround: string }>`
   width: 100%;
   background-image: url(${(props) => props.backGround});
-  background-size: contain;
   aspect-ratio: 4 / 5;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top center;
-  background-size: ${(props) => props.imageScale * 100}%;
+  background-size: cover;
   top: 0;
   z-index: -1;
 `;
