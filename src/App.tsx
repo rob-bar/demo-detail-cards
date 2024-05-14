@@ -179,10 +179,16 @@ const DetailedWrapper = styled.div`
 const Detail = styled.div`
   width: 100vw;
   scroll-snap-align: center;
+  position: relative;
+  height: 100vh;
+  overflow-y: scroll;
 `;
 
 const DetailImage = styled.img`
   width: 100%;
+  /* position: fixed; */
+  top: 0;
+  z-index: -1;
 `;
 
 const Content = styled.div`
