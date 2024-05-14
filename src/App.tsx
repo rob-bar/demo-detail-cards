@@ -1,17 +1,16 @@
-import { UIEvent, useState } from "react";
 import { styled } from "styled-components";
 
 export function App() {
-  const [imageScale, setImageScale] = useState(1);
+  // const [imageScale, setImageScale] = useState(1);
 
-  const handleScroll = (e: UIEvent<HTMLDivElement>) => {
-    const target = e.target as HTMLDivElement;
-    setImageScale(1 - target.scrollTop / 1000);
-  };
+  // const handleScroll = (e: UIEvent<HTMLDivElement>) => {
+  //   const target = e.target as HTMLDivElement;
+  //   setImageScale(1 - target.scrollTop / 1000);
+  // };
 
   return (
     <DetailedWrapper>
-      <Detail onScroll={handleScroll}>
+      <Detail>
         <DetailImage backGround="https://picsum.photos/id/29/400/500" />
         <Content>
           <h2>
@@ -35,7 +34,7 @@ export function App() {
           </p>
         </Content>
       </Detail>
-      <Detail onScroll={handleScroll}>
+      <Detail>
         <DetailImage backGround="https://picsum.photos/id/24/400/500" />
         <Content>
           <h2>
@@ -48,7 +47,7 @@ export function App() {
           <p>Anim laboris exercitation fugiat, cillum. Fugiat cillum</p>
         </Content>
       </Detail>
-      <Detail onScroll={handleScroll}>
+      <Detail>
         <DetailImage backGround="https://picsum.photos/id/30/400/500" />
         <Content>
           <h2>
